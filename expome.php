@@ -50,7 +50,7 @@
 
         public function setPrezzo($prezzo){
 
-            if(!(is_int($prezzo) && $prezzo <= 2000 && $prezzo >=0))
+            if(is_int($prezzo) || $prezzo > 2000 || $prezzo < 0)
                 throw new Exception("Il prezzo deve essere un intero compreso tra 0 e 2000");
             
             $this -> prezzo = $prezzo;
